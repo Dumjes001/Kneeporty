@@ -1,7 +1,13 @@
-#Ignore Dependencies
+
+#Ignore dependencies
 
 /node_modules
 
-#Ignore credentials
+#Ignore credential file
 
 credentials.js
+
+#Ignore local files
+
+public/files
+
