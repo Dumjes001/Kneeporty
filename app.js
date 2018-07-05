@@ -24,7 +24,8 @@ switch(app.get('env')) {
             //Log uri for mongoose connection
 
             console.log(credentials.mongo.prod);
-        })
+        });
+        break;
 }
 
 app.listen(app.get('port'), () => {
