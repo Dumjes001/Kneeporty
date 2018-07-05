@@ -1,0 +1,7 @@
+#Ignore Dependencies
+
+/node_modules
+
+#Ignore credentials
+
+credentials.js
