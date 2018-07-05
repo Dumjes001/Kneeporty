@@ -1,0 +1,42 @@
+{
+  "name": "kneeporty",
+  "version": "1.0.0",
+  "description": "A health management app that works with big data and AI",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kingsley-einstein/Kneeporty.git"
+  },
+  "author": "Kneeporty",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/kingsley-einstein/Kneeporty/issues"
+  },
+  "homepage": "https://github.com/kingsley-einstein/Kneeporty#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "connect-mongo": "^2.0.1",
+    "cookie-parser": "^1.4.3",
+    "crypto": "^1.0.1",
+    "email-regex": "^3.0.0",
+    "express": "^4.16.3",
+    "express-handlebars": "^3.0.0",
+    "express-session": "^1.15.6",
+    "formidable": "^1.2.1",
+    "fs": "0.0.1-security",
+    "http": "0.0.0",
+    "jsonwebtoken": "^8.3.0",
+    "mongoose": "^5.2.1",
+    "passport": "^0.4.0",
+    "passport-facebook": "^2.1.1",
+    "passport-local": "^1.0.0",
+    "path": "^0.12.7",
+    "request": "^2.87.0",
+    "socket.io": "^2.1.1",
+    "socketio": "^1.0.0",
+    "underscore": "^1.9.1"
+  }
+}
