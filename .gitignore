@@ -1,0 +1,12 @@
+#Ignore dependencies
+
+/node_modules
+
+#Ignore credential file
+
+credentials.js
+
+#Ignore local files
+
+public/files
+
