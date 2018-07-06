@@ -9,5 +9,5 @@ credentials.js
 
 #Ignore local files
 
-public/files
+/public/files
 
