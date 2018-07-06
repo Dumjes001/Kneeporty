@@ -12,7 +12,7 @@ const moment = require('moment');
 module.exports = {
     config: (app) => {
         app.engine('hbs', hbs({
-            defaultLayout: 'main',
+            defaultLayout: 'header',
             layoutsDir: path.resolve(app.get('views')+'/layouts'),
             extname: '.hbs',
             helpers: {
