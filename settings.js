@@ -6,6 +6,7 @@ const MemoryStore = session.MemoryStore;
 const cookie = require('cookie-parser');
 const credentials = require('./credentials');
 const mongoose = require('mongoose');
+const moment = require('moment');
 
 
 module.exports = {
@@ -13,7 +14,12 @@ module.exports = {
         app.engine('hbs', hbs({
             defaultLayout: 'main',
             layoutsDir: path.resolve(app.get('views')+'/layouts'),
-            extname: '.hbs'
+            extname: '.hbs',
+            helpers: {
+                timefunc: (time) => {
+                    return moment(time).startOf('minute').fromNow();
+                }
+            }
         }));
         app.set('view engine', 'hbs');
         app.use(cookie());
