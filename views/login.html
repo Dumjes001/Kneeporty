@@ -1,0 +1,38 @@
+	<body>
+		
+		<div id="index-flex-container">
+			<div></div>
+			<section>
+				Health Management Made Easy With Technology.
+				A Lias Of Doctors, Biologists And Software Developers With The Mission Of Impeding Fatal Illnesses
+				<br/>
+				<a href="/signup" class="blue-material-button"><i class="fa fa-home"></i> Sign Up</a> 
+				</section>
+			<aside>
+				<form method="POST" action="/login" novalidate>
+					{{#if notifs}}
+						<div class="{{notifs.type}}">
+							{{notifs.message}}
+						</div>
+					{{/if}}
+					<h3>
+						Login
+					</h3>
+					<br/>
+					<input type="text" placeholder="E-mail" name="identify" class="kneeporty-material-input">
+					<br/>
+					<input type="password" placeholder="Password" name="pass" class="kneeporty-material-input">
+					<br/>
+					<br/>
+					<button type="submit" class="kneeporty-material-button">Sign In</button>
+				</form>
+			</aside>
+		</div>
+		<div class="sidebar">
+			<aside>
+				Registered Members: {{user_count}}
+				<br/>
+				Articles: {{data_count}}
+			</aside>
+		</div>
+	</body>
