@@ -12,7 +12,7 @@ const moment = require('moment');
 module.exports = {
     config: (app) => {
         app.engine('hbs', hbs({
-            defaultLayout: 'main',
+            defaultLayout: 'header',
             layoutsDir: path.resolve(app.get('views')+'/layouts'),
             extname: '.hbs',
             helpers: {
@@ -24,6 +24,7 @@ module.exports = {
         app.set('view engine', 'hbs');
         app.use(cookie());
         app.use(session({
+            secret: credentials.session.init.secret,
             cookie: credentials.session.init.cookie,
             resave: true,
             saveUninitialized: true,
