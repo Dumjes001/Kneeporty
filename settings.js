@@ -7,12 +7,15 @@ const cookie = require('cookie-parser');
 const credentials = require('./credentials');
 const mongoose = require('mongoose');
 const moment = require('moment');
+const morgan = require('morgan');
+const logger = require('express-logger');
+const routes = require('./routes');
 
 
 module.exports = {
     config: (app) => {
         app.engine('hbs', hbs({
-            defaultLayout: 'header',
+            defaultLayout: 'main',
             layoutsDir: path.resolve(app.get('views')+'/layouts'),
             extname: '.hbs',
             helpers: {
@@ -32,9 +35,20 @@ module.exports = {
                 mongooseConnection: mongoose.connection,
                 db: app.get('env') === 'development' ? 'kneeportytestdb' : ''
             })
-        }))
+        }));
+
+        switch(app.get('env')) {
+            case 'development':
+                app.use(morgan('dev'))
+                break;
+            case 'production':
+                app.use(logger({
+                    path: path.join(__dirname, '/logs')
+                }))
+        }
+        console.log('App configured');
     },
     setRoutes: (app) => {
-
+        routes.init(app);
     }
 }
